@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+ xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns="http://www.w3.org/1999/html">
+<body>
+
+<header th:fragment="header" id="header">
+	<div class="header-right align-items-center d-flex">
+		<div class="flex-grow-1 d-flex align-items-center">
+			<a class="navbar-brand logo" th:href="@{/}">
+				<img th:src="@{img/logo.png}" height="50" alt="MI Logo" />
+			</a>
+			<nav class="navbar navbar-expand-lg  w-100">
+				<div class="container-fluid">
+					<div class="collapse navbar-collapse">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a th:href="@{/newbusiness}" class="nav-link px-2 text-truncate">New Business</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#" th:href="@{/enquiry}">Enquiry</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#" th:href="@{/}">Cancellation</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#" th:href="@{/}">Daily Report</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="flex-shrink-0 dropdown">
+					<a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+						<img th:src="@{/img/avatar.png}" alt="user" width="32" height="32" class="rounded-circle">
+					</a>
+					<ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="dropdownUser2" style="">
+						<li><a class="dropdown-item" href="#">Settings</a></li>
+						<li><a class="dropdown-item" href="#">Profile</a></li>
+						<li>
+							<hr class="dropdown-divider">
+						</li>
+						<li><a class="dropdown-item" href="#">Sign out</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+</header>
+</body>
+</html>

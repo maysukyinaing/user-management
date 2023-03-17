@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=EMDB;encrypt=true;trustServerCertificate=true;
+    username: sa
+    password: 123@ace
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+     hibernate:
+      dialect: org.hibernate.dialect.SQLServer2008Dialect
+      format_sql: true
